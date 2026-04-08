@@ -166,9 +166,24 @@ const routeMap: RouteMap = {
   "403": "/403",
   "404": "/404",
   "500": "/500",
+  "elder": "/elder",
+  "elder_list": "/elder/list",
+  "evaluation": "/evaluation",
+  "evaluation_list": "/evaluation/list",
+  "finance": "/finance",
+  "finance_settlement": "/finance/settlement",
   "home": "/home",
   "iframe-page": "/iframe-page/:url",
-  "login": "/login/:module(pwd-login|code-login|register|reset-pwd|bind-wechat)?"
+  "login": "/login/:module(pwd-login|code-login|register|reset-pwd|bind-wechat)?",
+  "order": "/order",
+  "order_list": "/order/list",
+  "provider": "/provider",
+  "provider_list": "/provider/list",
+  "staff": "/staff",
+  "staff_list": "/staff/list",
+  "statistics": "/statistics",
+  "statistics_finance": "/statistics/finance",
+  "statistics_order": "/statistics/order"
 };
 
 /**

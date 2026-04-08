@@ -40,6 +40,66 @@ export const generatedRoutes: GeneratedRoute[] = [
     }
   },
   {
+    name: 'elder',
+    path: '/elder',
+    component: 'layout.base',
+    meta: {
+      title: 'elder',
+      i18nKey: 'route.elder'
+    },
+    children: [
+      {
+        name: 'elder_list',
+        path: '/elder/list',
+        component: 'view.elder_list',
+        meta: {
+          title: 'elder_list',
+          i18nKey: 'route.elder_list'
+        }
+      }
+    ]
+  },
+  {
+    name: 'evaluation',
+    path: '/evaluation',
+    component: 'layout.base',
+    meta: {
+      title: 'evaluation',
+      i18nKey: 'route.evaluation'
+    },
+    children: [
+      {
+        name: 'evaluation_list',
+        path: '/evaluation/list',
+        component: 'view.evaluation_list',
+        meta: {
+          title: 'evaluation_list',
+          i18nKey: 'route.evaluation_list'
+        }
+      }
+    ]
+  },
+  {
+    name: 'finance',
+    path: '/finance',
+    component: 'layout.base',
+    meta: {
+      title: 'finance',
+      i18nKey: 'route.finance'
+    },
+    children: [
+      {
+        name: 'finance_settlement',
+        path: '/finance/settlement',
+        component: 'view.finance_settlement',
+        meta: {
+          title: 'finance_settlement',
+          i18nKey: 'route.finance_settlement'
+        }
+      }
+    ]
+  },
+  {
     name: 'home',
     path: '/home',
     component: 'layout.base$view.home',
@@ -74,5 +134,94 @@ export const generatedRoutes: GeneratedRoute[] = [
       constant: true,
       hideInMenu: true
     }
+  },
+  {
+    name: 'order',
+    path: '/order',
+    component: 'layout.base',
+    meta: {
+      title: 'order',
+      i18nKey: 'route.order'
+    },
+    children: [
+      {
+        name: 'order_list',
+        path: '/order/list',
+        component: 'view.order_list',
+        meta: {
+          title: 'order_list',
+          i18nKey: 'route.order_list'
+        }
+      }
+    ]
+  },
+  {
+    name: 'provider',
+    path: '/provider',
+    component: 'layout.base',
+    meta: {
+      title: 'provider',
+      i18nKey: 'route.provider'
+    },
+    children: [
+      {
+        name: 'provider_list',
+        path: '/provider/list',
+        component: 'view.provider_list',
+        meta: {
+          title: 'provider_list',
+          i18nKey: 'route.provider_list'
+        }
+      }
+    ]
+  },
+  {
+    name: 'staff',
+    path: '/staff',
+    component: 'layout.base',
+    meta: {
+      title: 'staff',
+      i18nKey: 'route.staff'
+    },
+    children: [
+      {
+        name: 'staff_list',
+        path: '/staff/list',
+        component: 'view.staff_list',
+        meta: {
+          title: 'staff_list',
+          i18nKey: 'route.staff_list'
+        }
+      }
+    ]
+  },
+  {
+    name: 'statistics',
+    path: '/statistics',
+    component: 'layout.base',
+    meta: {
+      title: 'statistics',
+      i18nKey: 'route.statistics'
+    },
+    children: [
+      {
+        name: 'statistics_finance',
+        path: '/statistics/finance',
+        component: 'view.statistics_finance',
+        meta: {
+          title: 'statistics_finance',
+          i18nKey: 'route.statistics_finance'
+        }
+      },
+      {
+        name: 'statistics_order',
+        path: '/statistics/order',
+        component: 'view.statistics_order',
+        meta: {
+          title: 'statistics_order',
+          i18nKey: 'route.statistics_order'
+        }
+      }
+    ]
   }
 ];

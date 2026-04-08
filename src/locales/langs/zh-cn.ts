@@ -225,7 +225,22 @@ const local: App.I18n.Schema = {
     404: '页面不存在',
     500: '服务器错误',
     'iframe-page': '外链页面',
-    home: '首页'
+    home: '首页',
+    elder: '老人管理',
+    elder_list: '老人列表',
+    provider: '服务商管理',
+    provider_list: '服务商列表',
+    staff: '服务人员管理',
+    staff_list: '服务人员列表',
+    order: '订单管理',
+    order_list: '订单列表',
+    finance: '财务结算',
+    finance_settlement: '结算管理',
+    evaluation: '服务评价',
+    evaluation_list: '评价列表',
+    statistics: '数据统计',
+    statistics_order: '订单统计',
+    statistics_finance: '财务统计'
   },
   page: {
     login: {

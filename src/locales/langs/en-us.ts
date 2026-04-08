@@ -229,7 +229,22 @@ const local: App.I18n.Schema = {
     404: 'Page Not Found',
     500: 'Server Error',
     'iframe-page': 'Iframe',
-    home: 'Home'
+    home: 'Home',
+    elder: 'Elderly Management',
+    elder_list: 'Elderly List',
+    provider: 'Provider Management',
+    provider_list: 'Provider List',
+    staff: 'Staff Management',
+    staff_list: 'Staff List',
+    order: 'Order Management',
+    order_list: 'Order List',
+    finance: 'Financial Settlement',
+    finance_settlement: 'Settlement Management',
+    evaluation: 'Service Evaluation',
+    evaluation_list: 'Evaluation List',
+    statistics: 'Statistics',
+    statistics_order: 'Order Statistics',
+    statistics_finance: 'Financial Statistics'
   },
   page: {
     login: {

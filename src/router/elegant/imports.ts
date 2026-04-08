@@ -20,5 +20,13 @@ export const views: Record<LastLevelRouteKey, RouteComponent | (() => Promise<Ro
   500: () => import("@/views/_builtin/500/index.vue"),
   "iframe-page": () => import("@/views/_builtin/iframe-page/[url].vue"),
   login: () => import("@/views/_builtin/login/index.vue"),
+  elder_list: () => import("@/views/elder/list/index.vue"),
+  evaluation_list: () => import("@/views/evaluation/list/index.vue"),
+  finance_settlement: () => import("@/views/finance/settlement/index.vue"),
   home: () => import("@/views/home/index.vue"),
+  order_list: () => import("@/views/order/list/index.vue"),
+  provider_list: () => import("@/views/provider/list/index.vue"),
+  staff_list: () => import("@/views/staff/list/index.vue"),
+  statistics_finance: () => import("@/views/statistics/finance/index.vue"),
+  statistics_order: () => import("@/views/statistics/order/index.vue"),
 };

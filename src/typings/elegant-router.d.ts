@@ -20,9 +20,24 @@ declare module "@elegant-router/types" {
     "403": "/403";
     "404": "/404";
     "500": "/500";
+    "elder": "/elder";
+    "elder_list": "/elder/list";
+    "evaluation": "/evaluation";
+    "evaluation_list": "/evaluation/list";
+    "finance": "/finance";
+    "finance_settlement": "/finance/settlement";
     "home": "/home";
     "iframe-page": "/iframe-page/:url";
     "login": "/login/:module(pwd-login|code-login|register|reset-pwd|bind-wechat)?";
+    "order": "/order";
+    "order_list": "/order/list";
+    "provider": "/provider";
+    "provider_list": "/provider/list";
+    "staff": "/staff";
+    "staff_list": "/staff/list";
+    "statistics": "/statistics";
+    "statistics_finance": "/statistics/finance";
+    "statistics_order": "/statistics/order";
   };
 
   /**
@@ -57,9 +72,16 @@ declare module "@elegant-router/types" {
     | "403"
     | "404"
     | "500"
+    | "elder"
+    | "evaluation"
+    | "finance"
     | "home"
     | "iframe-page"
     | "login"
+    | "order"
+    | "provider"
+    | "staff"
+    | "statistics"
   >;
 
   /**
@@ -81,7 +103,15 @@ declare module "@elegant-router/types" {
     | "500"
     | "iframe-page"
     | "login"
+    | "elder_list"
+    | "evaluation_list"
+    | "finance_settlement"
     | "home"
+    | "order_list"
+    | "provider_list"
+    | "staff_list"
+    | "statistics_finance"
+    | "statistics_order"
   >;
 
   /**
