@@ -13,7 +13,6 @@ import { clearAuthStorage, getToken } from './shared';
 
 export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
   const route = useRoute();
-  const authStore = useAuthStore();
   const routeStore = useRouteStore();
   const tabStore = useTabStore();
   const { toLogin, redirectFromLogin } = useRouterPush(false);
@@ -23,9 +22,10 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
 
   const userInfo: Api.Auth.UserInfo = reactive({
     userId: '',
-    userName: '',
+    username: '',
+    realName: '',
     roles: [],
-    buttons: []
+    permissions: []
   });
 
   /** is super role in static route */
@@ -44,7 +44,15 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
 
     clearAuthStorage();
 
-    authStore.$reset();
+    // Reset state
+    token.value = '';
+    Object.assign(userInfo, {
+      userId: '',
+      username: '',
+      realName: '',
+      roles: [],
+      permissions: []
+    });
 
     if (!route.meta.constant) {
       await toLogin();
@@ -117,7 +125,7 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
 
         window.$notification?.success({
           title: $t('page.login.common.loginSuccess'),
-          content: $t('page.login.common.welcomeBack', { userName: userInfo.userName }),
+          content: $t('page.login.common.welcomeBack', { userName: userInfo.username }),
           duration: 4500
         });
       }
@@ -130,14 +138,16 @@ export const useAuthStore = defineStore(SetupStoreId.Auth, () => {
 
   async function loginByToken(loginToken: Api.Auth.LoginToken) {
     // 1. stored in the localStorage, the later requests need it in headers
-    localStg.set('token', loginToken.token);
-    localStg.set('refreshToken', loginToken.refreshToken);
+    localStg.set('token', loginToken.accessToken);
+    if (loginToken.refreshToken) {
+      localStg.set('refreshToken', loginToken.refreshToken);
+    }
 
     // 2. get user info
     const pass = await getUserInfo();
 
     if (pass) {
-      token.value = loginToken.token;
+      token.value = loginToken.accessToken;
 
       return true;
     }
